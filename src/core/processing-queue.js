@@ -78,6 +78,7 @@ function processTaskQueue( start ) {
  * Advance the testQueue to the next test to process. Call done() if testQueue completes.
  */
 function advanceTestQueue() {
+	console.log(config.queue.length);
 	if ( !config.blocking && !config.queue.length && config.depth === 0 ) {
 		done();
 		return;
